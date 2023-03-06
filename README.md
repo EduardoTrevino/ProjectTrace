@@ -34,6 +34,10 @@ automatic data
 collection and data
 cleaning
 
+Data has been collected under the data folder for NSF ✅
+Data from NIH, DOE, DOJ is **TO BE COMPLETED**
+Data cleaning for merging of the datasets is **TO BE COMPLETED**
+
 ## Database/Data Repository Creation
 ### Grading Criteria
 The database is setup on a server that is
