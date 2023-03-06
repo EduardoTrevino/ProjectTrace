@@ -17,7 +17,7 @@ then work on the
 system design and
 discuss with the
 instructor
-{Insert Image of email}
+![SystemDesignApproval](https://github.com/EduardoTrevino/ProjectTrace/blob/master/System%20Design%20and%20Project%20Plan.jpg?raw=true)
 
 ## Data Gathering
 ### Grading Criteria
@@ -33,6 +33,12 @@ code/scripts for
 automatic data
 collection and data
 cleaning
+
+Data has been collected under the data folder for NSF ✅
+
+Data from NIH, DOE, DOJ is **TO BE COMPLETED**
+
+Data cleaning for merging of the datasets is **TO BE COMPLETED**
 
 ## Database/Data Repository Creation
 ### Grading Criteria
