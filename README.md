@@ -1,4 +1,50 @@
 # ProjectTrace
+All the teams should maintain a work-log of progress made each week (This will be collected from commits on this github repo)
+
+Final datasets and code needs to be shared via a GitHub repository (We will need to add steps see below)
+
+##PROJECT PLAN
+
+This project will trace the lifecycle/progress path of the projects funded by the federal agencies.
+
+Go to the NSF website: https://www.nsf.gov/awardsearch/simpleSearchResult?queryText=CSSI 
+Go to the NIH website:
+Go to the DOE website:
+Go to the DOJ website (not sure if this is the correct link: https://bja.ojp.gov/funding/expired?search=CSSI%2C+SI2%2C+DIBBS%2C+CICI%2C+MRI%2C+OAC%2C+CCF&fiscal_year=&sort_by=field_closing_date_value&sort_order=DESC#funding-opportunities-block-3-doe-2a5tck9yjpue
+(if they are not easily accessible, email the departmental point-of-contact to procure the data)
+Search for the awarded projects on the basis of the keywords below, export the data to CSV files, download each file separately first, and then later merge them all
+
+CSSI
+
+SI2
+
+DIBBS
+
+CICI
+
+MRI
+
+OAC
+
+CCF
+
+Perform “topic modeling” on the abstracts and titles of the awards and find the keywords that describe the awards
+
+For each project, on the basis of the keywords scrape the web to find the publications, news articles, tweets, videos, etc related to the project
+
+Create a database on the basis of the captured data
+
+Create a web-interface for the database
+
+On the basis of the collected data, create a catalog of the products
+
+On each catalog page, list all the information about the project captured from different sources in a standardized format
+
+On the basis of the gathered information, derive insights/statistics that show the impact of the projects on the society
+
+Please discuss the types of heuristics that you would be adopting for defining the impact of the projects with the instructor
+
+Please secure the website appropriately
 
 ## System Design and Project Plan
 ### Grading Criteria
