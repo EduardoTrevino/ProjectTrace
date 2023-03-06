@@ -17,8 +17,7 @@ then work on the
 system design and
 discuss with the
 instructor
-![SystemDesignApproval]([https://github.com/[username]/[reponame]/blob/[branch]/image.jpg](https://github.com/EduardoTrevino/ProjectTrace/blob/master/System%20Design%20and%20Project%20Plan.jpg)?raw=true)
-
+![SystemDesignApproval](https://github.com/EduardoTrevino/ProjectTrace/blob/master/System%20Design%20and%20Project%20Plan.jpg?raw=true)
 
 ## Data Gathering
 ### Grading Criteria
