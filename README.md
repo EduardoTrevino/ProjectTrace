@@ -3,7 +3,7 @@ All the teams should maintain a work-log of progress made each week (This will b
 
 Final datasets and code needs to be shared via a GitHub repository (We will need to add steps see below)
 
-##PROJECT PLAN
+## PROJECT PLAN
 
 This project will trace the lifecycle/progress path of the projects funded by the federal agencies.
 
