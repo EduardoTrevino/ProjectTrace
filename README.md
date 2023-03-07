@@ -8,10 +8,15 @@ Final datasets and code needs to be shared via a GitHub repository (We will need
 This project will trace the lifecycle/progress path of the projects funded by the federal agencies.
 
 Go to the NSF website: https://www.nsf.gov/awardsearch/simpleSearchResult?queryText=CSSI 
+
 Go to the NIH website:
+
 Go to the DOE website:
+
 Go to the DOJ website (not sure if this is the correct link: https://bja.ojp.gov/funding/expired?search=CSSI%2C+SI2%2C+DIBBS%2C+CICI%2C+MRI%2C+OAC%2C+CCF&fiscal_year=&sort_by=field_closing_date_value&sort_order=DESC#funding-opportunities-block-3-doe-2a5tck9yjpue
+
 (if they are not easily accessible, email the departmental point-of-contact to procure the data)
+
 Search for the awarded projects on the basis of the keywords below, export the data to CSV files, download each file separately first, and then later merge them all
 
 CSSI
