@@ -33,7 +33,7 @@ OAC
 
 CCF
 
-Perform “topic modeling” on the abstracts and titles of the awards and find the keywords that describe the awards
+Perform “topic modeling” on the abstracts and titles of the awards and find the keywords that describe the awards - "Abstracts based on correlation based on content, ex say someone did parallel compute in ER1 or ER2 but we want to be able to cluster both projects together because they both have parallelization in compute in abstracts so matching projects based on award type would not be recommended"
 
 For each project, on the basis of the keywords scrape the web to find the publications, news articles, tweets, videos, etc related to the project
 
