@@ -19,19 +19,7 @@ Go to the DOJ website (not sure if this is the correct link: https://bja.ojp.gov
 
 Search for the awarded projects on the basis of the keywords below, export the data to CSV files, download each file separately first, and then later merge them all
 
-CSSI
-
-SI2
-
-DIBBS
-
-CICI
-
-MRI
-
-OAC
-
-CCF
+CSSI, SI2, DIBBS, CICI, MRI, OAC, CCF
 
 Perform “topic modeling” on the abstracts and titles of the awards and find the keywords that describe the awards - "Abstracts based on correlation based on content, ex say someone did parallel compute in ER1 or ER2 but we want to be able to cluster both projects together because they both have parallelization in compute in abstracts so matching projects based on award type would not be recommended"
 
