@@ -214,9 +214,13 @@ Stop words
 
 Stem words
 
+Frequency Dictionary
 
+Document Term matrix
 
 LDA model
+
+Print topics and top keywords. We will use this to scrape the web.
 
 
 
