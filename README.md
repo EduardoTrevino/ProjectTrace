@@ -170,3 +170,57 @@ The test-plan should
 consider testing for
 security
 vulnerabilities
+
+# Project Outline
+I have uploaded 3 folders each representing an agency (DOE, NIH, NSF), as you can tell we are missing DOJ, I have emailed them but they have not gotten back to me so either we find an online database that has them for me, or maybe there exists a website that I have not ran into yet.
+
+Inside each folder I have placed all their availble data on the basis of the following keywords CSSI, SI2, DIBBS, CICI, MRI, OAC, CCF. If there is a keyword missing under {AGENCYNAME}_{KEYWORD} it is because there was NO AWARD for that agency in that keyword.
+
+To get started on topic modeling:
+Our goal is to perform topic modeling on the abstracts and titles of the awards and find the keywords that describe the awards.
+
+1. Preprocess the text data: Remove stop words, punctuation, and other unnecessary characters from the abstracts and titles. Tokenize the text into individual words or phrases, and stem or lemmatize the words to reduce the dimensionality of the dataset.
+
+2. Create a document-term matrix: This matrix will represent the frequency of occurrence of each term in each document. Each row in the matrix represents a document (i.e., an abstract or title), and each column represents a term. (Rememeber EX. we did in R in class)
+
+3. Choose a topic modeling algorithm: There are several popular algorithms for topic modeling, including Latent Dirichlet Allocation (LDA), Non-negative Matrix Factorization (NMF), and Latent Semantic Analysis (LSA). I (Eduardo) have decided to use a LDA model using Gensim.
+
+4. Train the model. This will assign a weight to each term in each topic, indicating how strongly that term is associated with that topic.
+
+5. Analyze the output of the topic model to identify the most relevant topics and the keywords associated with each topic. Examine the top words or phrases in each topic, as well as the probability of each document belonging to each topic.
+
+## Code Guide
+
+Libraies 
+```
+pip install nltk
+pip install gensim
+pip install pandas
+```
+
+Go on the python notebook (If you wanted to learn R, I didnt use R so you'll have to use a language translator to know what is going on) 
+
+In english what is going on is you will see how I first got all the data from the .csv files which are from the NSF dataset, and NIH datasets and merged the abstracts and titles of them into a pandas dataframe where I appended that into a list. 
+
+Then I did the same for the excel files.
+
+Concatenated into a data frame.
+
+Exported into a csv file (this is good practice to see the preprocessing was done correctly, and serve as a middle point).
+
+Tokenize
+
+Stop words
+
+Stem words
+
+
+
+LDA model
+
+
+
+
+Note that the naming convention we used is:
+
+{Author}_{Algorithm}_{Tokenized}_{STEM or LEM}_{Stopwords rem}
