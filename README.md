@@ -82,7 +82,7 @@ Data cleaning for merging of the datasets is ✅ **See "Abstract cleaning & furt
 ## Database/Data Repository Creation
 ### Grading Criteria
 The database is setup on a server that is
-reachable via a webinterface
+reachable via a webinterface ✅ **See "MongoDB" in project outline**
 ### Notes
 Create a database
 and/or a repository
@@ -117,7 +117,7 @@ upon features should
 be implemented and
 code should be
 shared via a GitHub
-repository
+repository ✅ **https://github.com/EduardoTrevino/ProjectTrace/commits/master**
 ### Notes
 A fully-functional
 code with steps to
@@ -125,7 +125,7 @@ install (README file)
 A test-plan to test all
 the features
 implemented should
-be submitted
+be submitted ✅ **See Project outline below 😊**
 
 ## Presentation & Team Work
 ### Grading Criteria
