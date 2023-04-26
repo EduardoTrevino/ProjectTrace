@@ -74,7 +74,9 @@ collection and data
 cleaning
 
 Data has been collected under the data folder for NSF, NIH DOE ✅ **See "Data collection" in project outline**
+
 DOJ is **SCRATCHED**
+
 Data cleaning for merging of the datasets is ✅ **See "Abstract cleaning & further processing" in project outline**
 
 ## Database/Data Repository Creation
