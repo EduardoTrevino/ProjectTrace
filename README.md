@@ -236,3 +236,57 @@ Note that the naming convention we used is:
 ## Abstract cleaning & further processing
 
 For this part of the text we are using a LDA model for each paper in each document to get the top 8 topics of each paper, to cut out the noise we are focusing on the NSF dataset which contains the following segements of information: "AwardNumber", "Title", "NSFOrganization", "PrincipalInvestigator", "PIEmailAddress", "Abstract"
+
+This code processes NSF project data from multiple CSV files, extracts keywords from the abstracts using LDA (Latent Dirichlet Allocation), searches for related news articles using the googlesearch-python library, and saves the results in processed CSV files. Below is a step-by-step explanation of the code, including the prerequisites for running it on your machine.
+
+### Prerequisites
+Install Python 3.x.
+Install the necessary Python libraries: pandas, gensim, googlesearch-python, nltk, and requests.
+You can install them using pip: 
+```
+pip install pandas gensim googlesearch-python nltk requests
+```
+
+### Code Breakdown
+Import the necessary libraries.
+
+Download the required NLTK data:
+```
+nltk.download('stopwords')
+nltk.download('wordnet')
+```
+Define the preprocess_abstract() function to clean and preprocess the abstract text. This function removes HTML tags, converts text to lowercase, removes special characters and numbers, tokenizes the text, removes stopwords, and lemmatizes words.
+
+Define the get_lda_keywords() function to extract keywords from a given LDA model and Bag-of-Words (BoW) representation of a document. The function returns the top keywords for the dominant topic in the document.
+
+Define the search_news() function to search for news articles related to a given title using the googlesearch-python library. The function returns a formatted string containing the title, URL, and description of the search results.
+
+Define the clean_abstract() function to remove HTML tags and extra whitespaces from the abstract text.
+
+List the input NSF CSV files to be processed.
+
+Initialize an empty DataFrame to store the processed data from all the CSV files.
+
+Loop through each input CSV file and perform the following steps:
+
+1. Read the CSV file using pandas and select the required columns.
+
+2. Preprocess the abstracts and create a dictionary and corpus for LDA.
+
+3. Train an LDA model with the corpus and dictionary.
+
+4. Extract the LDA keywords for each abstract.
+
+5. Search for related news articles using the project titles.
+
+6. Clean the abstracts.
+
+7. Rename the columns and reorganize the DataFrame.
+
+8. Save the processed data to a new CSV file with the appropriate name.
+
+9. Append the processed data to the all_projects DataFrame.
+
+Save the combined processed data from all the CSV files to a single output merged CSV file.
+
+To run the code on your machine, make sure you have installed the necessary prerequisites and placed the input NSF CSV files in the correct directory. Then, execute the Python script containing the code. The processed data will be saved in the specified output CSV files, and you'll see a message indicating the successful completion of each file.
