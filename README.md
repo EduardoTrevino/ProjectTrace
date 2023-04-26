@@ -1,4 +1,6 @@
 # ProjectTrace
+This project will trace the lifecycle/progress path of the projects funded by the federal agencies.
+
 All the teams should maintain a work-log of progress made each week (This will be collected from commits on this github repo)
 
 Final datasets and code needs to be shared via a GitHub repository (We will need to add steps see below)
@@ -73,16 +75,16 @@ automatic data
 collection and data
 cleaning
 
-Data has been collected under the data folder for NSF ✅
+Data has been collected under the data folder for NSF, NIH DOE ✅ **See "Data collection" in https://github.com/EduardoTrevino/ProjectTrace/blob/master/README.md#data-collection**
 
-Data from NIH, DOE, DOJ is **TO BE COMPLETED**
+DOJ is **SCRATCHED**
 
-Data cleaning for merging of the datasets is **TO BE COMPLETED**
+Data cleaning for merging of the datasets is ✅ **See "Abstract cleaning & further processing" in https://github.com/EduardoTrevino/ProjectTrace/blob/master/README.md#abstract-cleaning--further-processing**
 
 ## Database/Data Repository Creation
 ### Grading Criteria
 The database is setup on a server that is
-reachable via a webinterface
+reachable via a webinterface ✅ **See "MongoDB" in project outline**
 ### Notes
 Create a database
 and/or a repository
@@ -117,7 +119,7 @@ upon features should
 be implemented and
 code should be
 shared via a GitHub
-repository
+repository ✅ **https://github.com/EduardoTrevino/ProjectTrace/commits/master**
 ### Notes
 A fully-functional
 code with steps to
@@ -125,7 +127,7 @@ install (README file)
 A test-plan to test all
 the features
 implemented should
-be submitted
+be submitted ✅ **See Project outline below 😊 https://github.com/EduardoTrevino/ProjectTrace/blob/master/README.md#project-outline**
 
 ## Presentation & Team Work
 ### Grading Criteria
@@ -172,7 +174,8 @@ security
 vulnerabilities
 
 # Project Outline
-I have uploaded 3 folders each representing an agency (DOE, NIH, NSF), as you can tell we are missing DOJ, I have emailed them but they have not gotten back to me so either we find an online database that has them for me, or maybe there exists a website that I have not ran into yet.
+## Data collection
+Eduardo has Data collected 3 folders each representing an agency (DOE, NIH, NSF), as you can tell we are missing DOJ, I have emailed them but they have not gotten back to me so either we find an online database that has them for me, or maybe there exists a website that I have not ran into yet.
 
 Inside each folder I have placed all their availble data on the basis of the following keywords CSSI, SI2, DIBBS, CICI, MRI, OAC, CCF. If there is a keyword missing under {AGENCYNAME}_{KEYWORD} it is because there was NO AWARD for that agency in that keyword.
 
@@ -189,7 +192,7 @@ Our goal is to perform topic modeling on the abstracts and titles of the awards 
 
 5. Analyze the output of the topic model to identify the most relevant topics and the keywords associated with each topic. Examine the top words or phrases in each topic, as well as the probability of each document belonging to each topic.
 
-## Code Guide
+### Code prep and Guide
 
 Libraies 
 ```
@@ -228,3 +231,62 @@ Print topics and top keywords. We will use this to scrape the web.
 Note that the naming convention we used is:
 
 {Author}_{Algorithm}_{Tokenized}_{STEM or LEM}_{Stopwords rem}
+
+
+## Abstract cleaning & further processing
+
+For this part of the text we are using a LDA model for each paper in each document to get the top 8 topics of each paper, to cut out the noise we are focusing on the NSF dataset which contains the following segements of information: "AwardNumber", "Title", "NSFOrganization", "PrincipalInvestigator", "PIEmailAddress", "Abstract"
+
+This code processes NSF project data from multiple CSV files, extracts keywords from the abstracts using LDA (Latent Dirichlet Allocation), searches for related news articles using the googlesearch-python library, and saves the results in processed CSV files. Below is a step-by-step explanation of the code, including the prerequisites for running it on your machine.
+
+### Prerequisites
+Install Python 3.x.
+Install the necessary Python libraries: pandas, gensim, googlesearch-python, nltk, and requests.
+You can install them using pip: 
+```
+pip install pandas gensim googlesearch-python nltk requests
+```
+
+### Code Breakdown
+Import the necessary libraries.
+
+Download the required NLTK data:
+```
+nltk.download('stopwords')
+nltk.download('wordnet')
+```
+Define the preprocess_abstract() function to clean and preprocess the abstract text. This function removes HTML tags, converts text to lowercase, removes special characters and numbers, tokenizes the text, removes stopwords, and lemmatizes words.
+
+Define the get_lda_keywords() function to extract keywords from a given LDA model and Bag-of-Words (BoW) representation of a document. The function returns the top keywords for the dominant topic in the document.
+
+Define the search_news() function to search for news articles related to a given title using the googlesearch-python library. The function returns a formatted string containing the title, URL, and description of the search results.
+
+Define the clean_abstract() function to remove HTML tags and extra whitespaces from the abstract text.
+
+List the input NSF CSV files to be processed.
+
+Initialize an empty DataFrame to store the processed data from all the CSV files.
+
+Loop through each input CSV file and perform the following steps:
+
+1. Read the CSV file using pandas and select the required columns.
+
+2. Preprocess the abstracts and create a dictionary and corpus for LDA.
+
+3. Train an LDA model with the corpus and dictionary.
+
+4. Extract the LDA keywords for each abstract.
+
+5. Search for related news articles using the project titles.
+
+6. Clean the abstracts.
+
+7. Rename the columns and reorganize the DataFrame.
+
+8. Save the processed data to a new CSV file with the appropriate name.
+
+9. Append the processed data to the all_projects DataFrame.
+
+Save the combined processed data from all the CSV files to a single output merged CSV file.
+
+To run the code on your machine, make sure you have installed the necessary prerequisites and placed the input NSF CSV files in the correct directory. Then, execute the Python script containing the code. The processed data will be saved in the specified output CSV files, and you'll see a message indicating the successful completion of each file.
