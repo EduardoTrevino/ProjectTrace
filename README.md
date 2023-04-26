@@ -75,7 +75,7 @@ automatic data
 collection and data
 cleaning
 
-Data has been collected under the data folder for NSF, NIH DOE ✅ **See "Data collection" in project outline**
+Data has been collected under the data folder for NSF, NIH DOE ✅ **See "Data collection" in https://github.com/EduardoTrevino/ProjectTrace/blob/master/README.md#data-collection**
 
 DOJ is **SCRATCHED**
 
@@ -127,7 +127,7 @@ install (README file)
 A test-plan to test all
 the features
 implemented should
-be submitted ✅ **See Project outline below 😊**
+be submitted ✅ **See Project outline below 😊 https://github.com/EduardoTrevino/ProjectTrace/blob/master/README.md#project-outline**
 
 ## Presentation & Team Work
 ### Grading Criteria
