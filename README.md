@@ -172,7 +172,7 @@ security
 vulnerabilities
 
 # Project Outline
-I have uploaded 3 folders each representing an agency (DOE, NIH, NSF), as you can tell we are missing DOJ, I have emailed them but they have not gotten back to me so either we find an online database that has them for me, or maybe there exists a website that I have not ran into yet.
+Eduardo has Data collected 3 folders each representing an agency (DOE, NIH, NSF), as you can tell we are missing DOJ, I have emailed them but they have not gotten back to me so either we find an online database that has them for me, or maybe there exists a website that I have not ran into yet.
 
 Inside each folder I have placed all their availble data on the basis of the following keywords CSSI, SI2, DIBBS, CICI, MRI, OAC, CCF. If there is a keyword missing under {AGENCYNAME}_{KEYWORD} it is because there was NO AWARD for that agency in that keyword.
 
@@ -228,3 +228,8 @@ Print topics and top keywords. We will use this to scrape the web.
 Note that the naming convention we used is:
 
 {Author}_{Algorithm}_{Tokenized}_{STEM or LEM}_{Stopwords rem}
+
+
+## Abstract cleaning for further processing
+
+For this part of the text we are using a LDA model for each paper in each document to get the top 8 topics of each paper, to cut out the noise we are focusing on the NSF dataset which contains the following segements of information: "AwardNumber", "Title", "NSFOrganization", "PrincipalInvestigator", "PIEmailAddress", "Abstract"
