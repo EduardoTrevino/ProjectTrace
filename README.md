@@ -73,11 +73,9 @@ automatic data
 collection and data
 cleaning
 
-Data has been collected under the data folder for NSF ✅
-
-Data from NIH, DOE, DOJ is **TO BE COMPLETED**
-
-Data cleaning for merging of the datasets is **TO BE COMPLETED**
+Data has been collected under the data folder for NSF, NIH DOE ✅ **See "Data collection" in project outline**
+DOJ is **SCRATCHED**
+Data cleaning for merging of the datasets is ✅ **See "Abstract cleaning & further processing" in project outline**
 
 ## Database/Data Repository Creation
 ### Grading Criteria
@@ -172,6 +170,7 @@ security
 vulnerabilities
 
 # Project Outline
+## Data collection
 Eduardo has Data collected 3 folders each representing an agency (DOE, NIH, NSF), as you can tell we are missing DOJ, I have emailed them but they have not gotten back to me so either we find an online database that has them for me, or maybe there exists a website that I have not ran into yet.
 
 Inside each folder I have placed all their availble data on the basis of the following keywords CSSI, SI2, DIBBS, CICI, MRI, OAC, CCF. If there is a keyword missing under {AGENCYNAME}_{KEYWORD} it is because there was NO AWARD for that agency in that keyword.
@@ -189,7 +188,7 @@ Our goal is to perform topic modeling on the abstracts and titles of the awards 
 
 5. Analyze the output of the topic model to identify the most relevant topics and the keywords associated with each topic. Examine the top words or phrases in each topic, as well as the probability of each document belonging to each topic.
 
-## Code Guide
+### Code prep and Guide
 
 Libraies 
 ```
@@ -230,6 +229,6 @@ Note that the naming convention we used is:
 {Author}_{Algorithm}_{Tokenized}_{STEM or LEM}_{Stopwords rem}
 
 
-## Abstract cleaning for further processing
+## Abstract cleaning & further processing
 
 For this part of the text we are using a LDA model for each paper in each document to get the top 8 topics of each paper, to cut out the noise we are focusing on the NSF dataset which contains the following segements of information: "AwardNumber", "Title", "NSFOrganization", "PrincipalInvestigator", "PIEmailAddress", "Abstract"
