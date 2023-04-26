@@ -79,7 +79,7 @@ Data has been collected under the data folder for NSF, NIH DOE ✅ **See "Data c
 
 DOJ is **SCRATCHED**
 
-Data cleaning for merging of the datasets is ✅ **See "Abstract cleaning & further processing" in project outline**
+Data cleaning for merging of the datasets is ✅ **See "Abstract cleaning & further processing" in https://github.com/EduardoTrevino/ProjectTrace/blob/master/README.md#abstract-cleaning--further-processing**
 
 ## Database/Data Repository Creation
 ### Grading Criteria
