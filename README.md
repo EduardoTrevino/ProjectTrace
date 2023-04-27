@@ -5,7 +5,8 @@ All the teams should maintain a work-log of progress made each week (This will b
 
 Final datasets and code needs to be shared via a GitHub repository (We will need to add steps see below)
 
-## PROJECT PLAN
+## System Design and Project Plan
+### Project Plan
 
 This project will trace the lifecycle/progress path of the projects funded by the federal agencies.
 
@@ -41,7 +42,6 @@ Please discuss the types of heuristics that you would be adopting for defining t
 
 Please secure the website appropriately
 
-## System Design and Project Plan
 ### Grading Criteria
 Software engineering
 guidelines should be
@@ -84,7 +84,7 @@ Data cleaning for merging of the datasets is ✅ **See "Abstract cleaning & furt
 ## Database/Data Repository Creation
 ### Grading Criteria
 The database is setup on a server that is
-reachable via a webinterface ✅ **See "MongoDB" in project outline**
+reachable via a webinterface ❌ **See "MongoDB" in project outline**
 ### Notes
 Create a database
 and/or a repository
