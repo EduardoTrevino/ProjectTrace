@@ -84,7 +84,7 @@ Data cleaning for merging of the datasets is ✅ **See "Abstract cleaning & furt
 ## Database/Data Repository Creation
 ### Grading Criteria
 The database is setup on a server that is
-reachable via a webinterface ✅ **See "MongoDB" in project outline**
+reachable via a webinterface ❌ **See "MongoDB" in project outline**
 ### Notes
 Create a database
 and/or a repository
