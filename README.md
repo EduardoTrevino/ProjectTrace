@@ -92,7 +92,7 @@ that can be queried
 for generating
 reports
 
-## User-Interface (web-interface, applicable dashboards and statistics)
+## Secure Web-interface (UI), statistic dashboards
 ### Grading Criteria
 The interface should
 include a search
@@ -103,13 +103,19 @@ Project-specific
 features as discussed
 with the instructor
 should be
-implemented
+implemented.
+The project website
+should use https and
+not http
 ### Notes
 Support user
 accounts were
 applicable, the webinterface should be
 tested across
-different browsers
+different browsers. The test-plan should
+consider testing for
+security
+vulnerabilities
 
 ## Features Delivered
 ### Grading Criteria
@@ -161,17 +167,6 @@ project
 The report/paper
 should be of a
 publishable quality
-
-## Security
-### Grading Criteria
-The project website
-should use https and
-not http
-### Notes
-The test-plan should
-consider testing for
-security
-vulnerabilities
 
 # Project Outline
 ## Data collection
