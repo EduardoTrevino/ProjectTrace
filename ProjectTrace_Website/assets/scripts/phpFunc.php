@@ -23,6 +23,8 @@
     }
 
     function PrintProjects($agency) {
+        $agency=addslashes($agency);
+        
         $dblink=new mysqli(/*host, user, password, database*/);
         $sql="SELECT * FROM `$agency`";
         $results=$dblink->query($sql) or die('ERROR: Database query failed.');
@@ -45,6 +47,9 @@
     }
 
     function PrintAward($agency, $award) {
+        $agency=addslashes($agency);
+        $award=addslashes($award);
+        
         $dblink=new mysqli(/*host, user, password, database*/);
         $sql='SELECT * FROM '.$agency.' WHERE award_number=\''.$award.'\'';
         $results=$dblink->query($sql) or die('ERROR: Database query failed.');
