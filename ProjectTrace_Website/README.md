@@ -10,7 +10,7 @@ The account will have free-tier benefits for 1 year after creation.
 5.) Under 'Instance Type' select 't2.micro' as your Instance type\
 6.) Under 'Key Pair (login)' create a new key pair. This will create and download a .pem file that you will need in order to connect to your instance.\
 7.) Under 'Network Settings' allow SSH, HTTPS, and HTTP traffic.\
-8.) Under 'Configure Storage' allocate 30GiB gp2 Root volume.\
+8.) Under 'Configure Storage' allocate 30GiB gp2 Root volume.
 
 After creating the instance with these settings, you will see it listed in your 'Instances' tab. Once it is running, you can select 'Connect' and follow the instructions given to connect to the instance.
 
