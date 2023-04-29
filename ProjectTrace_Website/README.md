@@ -88,6 +88,5 @@ sudo nginx -t\
 sudo service nginx reload
 
 ### Navigate to Webpage Directory
-cd /var/www/html
-
-## Database Setup
+cd /var/www/html\
+*Place .html/.php/etc files here*
