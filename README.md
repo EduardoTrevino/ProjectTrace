@@ -1,8 +1,10 @@
 # ProjectTrace
+## Summary
 This project will trace the lifecycle/progress path of the projects funded by the federal agencies.\
 All the teams should maintain a work-log of progress made each week (This will be collected from commits on this github repo)\
 Final datasets and code needs to be shared via a GitHub repository (We will need to add steps see below)
 
+# Rubric
 ## Project Plan ✅
 ### Grading Criteria
 Software engineering guidelines should be followed and the project plan should be prepared and discussed with the instructor.\
