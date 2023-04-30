@@ -24,7 +24,7 @@
 
 .LSDM_Header_Nav {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
 
     position: absolute;
     width: 85%;
@@ -63,6 +63,22 @@
     top: 300px;
     left: 20%;
     bottom: 0px;
+}
+
+.LSDM_Images_Grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+
+    align-items: center;
+    justify-items: center;
+}
+
+.LSDM_Images_Content {
+    border-radius: 16px;
+
+    max-width: 90%;
+    max-height: 256px;
 }
 
 .LSDM_Projects_List {
