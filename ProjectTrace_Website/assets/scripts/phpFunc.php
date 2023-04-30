@@ -64,7 +64,7 @@
             echo '<p> '.$data[5].' </p>';
             echo '<p> '.$data[7].' </p>';
 
-            // Display associated project images
+            // Display images associated with project
             $imageDir='/var/www/html/assets/images/'.preg_replace("/[^A-Za-z0-9 ]/", '', $data[1]).'/';
 
             if (is_dir($imageDir)) {
