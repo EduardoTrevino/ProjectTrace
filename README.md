@@ -10,7 +10,7 @@ Final datasets and code needs to be shared via a GitHub repository (We will need
 Software engineering guidelines should be followed and the project plan should be prepared and discussed with the instructor.\
 Submit the project plan over email and receive approval, then work on the system design and discuss with the instructor
 
-## Data Gathering ❌
+## Data Gathering ✅
 ### Grading Criteria
 The data is collected from the agreed upon or discussed sources, and the code for collecting data is fully functional\
 Implement the code/scripts for automatic data collection and data cleaning
