@@ -43,6 +43,11 @@
                     if ($_POST['nsf'] != 'nsf') { PrintAward('nsf', $_POST['nsf']); }
                     else { PrintProjects('nsf'); }
                 }
+                // [REMOVE AT LAUNCH] Test Agency
+                elseif (isset($_POST['TEST'])) {
+                    if ($_POST['TEST'] != 'TEST') { PrintAward('TEST', $_POST['TEST']); }
+                    else { PrintProjects('TEST'); }
+                }
                 else { PrintAgencies(); }
             ?>
         </div>
