@@ -15,7 +15,7 @@
             <div class="LSDM_Header_Nav">
                 <a href="./" class="LSDM_Nav_Buttons">              Home  </a>
                 <a href="./results.php" class="LSDM_Nav_Buttons">   Results </a>
-                <a href="./resources.html" class="LSDM_Nav_Buttons"> Resources </a>
+                <a href="./resources.php" class="LSDM_Nav_Buttons"> Resources </a>
                 <a href="./contact.php" class="LSDM_Nav_Buttons">   Contact </a>
             </div>
         </div>
@@ -26,7 +26,22 @@
         </div>
 
         <div class="LSDM_Body_Content">
-            <p> These are the tools and resources utilized in this project. </p>
+            <?php
+                // Fetch information from database
+                $dblink=new mysqli(/*'host', 'user', 'password', 'database'*/);
+                $sql="SELECT * FROM `resources`";
+                $results=$dblink->query($sql) or die('ERROR: Database query failed.');
+
+                while ($data=$results->fetch_array(MYSQLI_NUM)) {
+                    echo '<div class="LSDM_Resources_List-Top">';
+                    echo '<p> '.$data[0].' </p>';
+                    echo '<p> <a href="'.$data[2].'" target="blank">'.$data[2].'</a> </p>';
+                    echo '</div>';
+                    echo '<div class="LSDM_Resources_List-Bottom">';
+                    echo '<p> '.$data[1].' </p>';
+                    echo '</div>';
+                }
+            ?>
         </div>
     </body>
 </html>
