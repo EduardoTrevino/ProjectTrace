@@ -16,30 +16,48 @@
         echo '</form>';
     }
 
-    function PrintProjects($agency) {
+    function PrintProjects($agency, $page) {
         // Data Sanitization
         $agency=addslashes($agency);
 
         // Fetch information from database
-        $dblink=new mysqli(/*host, user, password, database*/);
-        $sql="SELECT * FROM `$agency`";
+        $dblink=new mysqli(/*'host', 'user', 'password', 'database'*/);
+        $sql="SELECT * FROM ".$agency."_content LIMIT ".($page*-100).", 100";
         $results=$dblink->query($sql) or die('ERROR: Database query failed.');
         $count=1;
 
         echo '<form action="" method="post">';
         echo '<button type="submit" name="" value=""> < Back </button>';
-        echo '<div class="LSDM_Projects_List">';
 
+        // Top Page Navigation
+        PrintPageNav($agency, $page);
+
+        echo '<div class="LSDM_Projects_List">';
+        echo '<p> # </p><p> Funding Agency </p><p> Project Title </p><p></p>';
         while ($data=$results->fetch_array(MYSQLI_NUM)) {
             echo '<p> '.$count++.' </p>';
-            echo '<p> '.$data[2].' </p>';
             echo '<p> '.$data[1].' </p>';
-            echo '<button type="submit" name="'.$agency.'" value="'.$data[0].'"> > </button>';
+            echo '<p> '.$data[0].' </p>';
+            echo '<button type="submit" name="'.$agency.'" value="'.$data[2].'" class="LSDM_List_Button"> > </button>';
         }
-
         echo '</div>';
+
+        // Bottom Page Navigation
+        PrintPageNav($agency, $page);
+
         echo '<button type="submit" name="" value=""> < Back </button>';
         echo '</form>';
+    }
+
+    function PrintPageNav($agency, $page) {
+        echo '<div class="LSDM_Projects_Page-Nav">';
+        echo '<p></p>';
+        if ($page < 0) { echo '<button type="submit" name="'.$agency.'" value="'.($page+1).'"> < Previous Page </button>'; }
+        else { echo '<p></p>'; }
+        echo '<p> '.($page*-1+1).' </p>';
+        echo '<p><button type="submit" name="'.$agency.'" value="'.($page-1).'"> Next Page > </button></p>';
+        echo '<p></p>';
+        echo '</div>';
     }
 
     function PrintAward($agency, $award) {
@@ -56,13 +74,12 @@
             
             // Print Project Information
             echo '<form action="" method="post">';
-            echo '<button type="submit" name="'.$agency.'" value="'.$agency.'"> < Back </button>';
-            echo '<p> Award Number: '.$data[0].' </p>';
-            echo '<h3> '.$data[1].' </h3>';
-            echo '<p> Funding Agency: '.$data[2].' </p>';
+            echo '<button type="submit" name="'.$agency.'" value="0"> < Back </button>';
+            echo '<p> Award Number: '.$data[2].' </p>';
+            echo '<h3> '.$data[0].' </h3>';
+            echo '<p> Funding Agency: '.$data[1].' </p>';
             echo '<p> Contact: '.$data[3].' | '.$data[4].' </p>';
-            echo '<p> '.$data[5].' </p>';
-            echo '<p> '.$data[7].' </p>';
+            echo '<p> '.$data[6].' </p>';
 
             // Display images associated with project
             $imageDir='/var/www/html/assets/images/'.preg_replace("/[^A-Za-z0-9 ]/", '', $data[1]).'/';
@@ -75,7 +92,7 @@
                 echo '</div></p>';
             }
 
-            echo '<button type="submit" name="'.$agency.'" value="'.$agency.'"> < Back </button>';
+            echo '<button type="submit" name="'.$agency.'" value="0"> < Back </button>';
             echo '</form>';
         }
     }
