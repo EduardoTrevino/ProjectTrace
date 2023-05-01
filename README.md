@@ -28,19 +28,19 @@ The project website should use https and not http.
 Support user accounts where applicable, the webinterface should be tested across different browsers.\
 The test-plan should consider testing for security vulnerabilities.
 
-## Features Delivered ❌
+## Features Delivered ✅
 ### Grading Criteria
 All the discussed/agreed upon features should be implemented and code should be shared via a GitHub.\
 A fully-functional code with steps to install (README file)\
 A test-plan to test all the features implemented should be submitted
 
-## Presentation & Team Work ❌
+## Presentation & Team Work ✅
 ### Grading Criteria
 A video-recording of the presentation should be submitted by each team, worklog should be shared, in-class presentation is also required.\
 The presentation should include a demonstration of the working prototype.\
 All team members should be appropriately engaged Worklog should be shared to track progress on the project.
 
-## Report/Paper ❌
+## Report/Paper ✅
 ### Grading Criteria
 A paper on the project;\
 The report/paper should be of a publishable quality.
